@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('artists', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->default('asd');
-            $table->string('country')->default('oi');
+            $table->string('name')->default('');
+            $table->string('country')->default('');
             $table->string('image')->constraint('images')->onUpdate('')->onDelete('')->default('');
             $table->timestamps();
 
