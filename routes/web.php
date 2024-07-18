@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\SpotifyFetchController;
 use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\ImageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +30,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Route::get ('/getImage',[ImageController::class,'FetchAndStore']) ; 
