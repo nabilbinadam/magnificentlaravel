@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('songs', function (Blueprint $table) {
-            $table->id();
-            $table->string('year');
-            $table->string('genre')->constraint('genres')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('artist')->constraint('artists')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('song_name');
-            $table->string('image')->constraint('images')->onDelete('cascade')->onUpdate('cascade');
-
-            $table->timestamps();
-        });
+         $table->id();
+    $table->foreignId('artist_id')->constrained('artists')->onDelete('cascade')->onUpdate('cascade'); // Use foreign key
+    $table->string('song_name');
+    $table->string('image');
+    $table->string('year')->nullable();
+    $table->string('genre')->nullable();
+    $table->timestamps();;
     }
 
     /**

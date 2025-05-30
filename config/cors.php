@@ -19,9 +19,9 @@ return [
 
     'allowed_methods' => ['get','post'],
 
-    'allowed_origins' => ['http://localhost:3000'],
+    'allowed_origins' => ['*'], // [localhostt 3000 for react]
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => ['*'],
 
     'allowed_headers' => ['*'],
 
